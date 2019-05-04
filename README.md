@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# magic-doc
+
+## Welcome!
+
+This repository is the WhiteRabbit code test which is completed using React js and Redux technologies.
+It is an Virtual Hospital Forms manager Portal which is build by considering "Mobile First" approach in mind
 
 ## Available Scripts
 

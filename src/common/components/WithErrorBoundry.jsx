@@ -1,5 +1,5 @@
 // This function takes a component and wraps error boundry aroun it 
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { logError } from '../helper/ErrorLogger';
 
 export default function withErrorBoundry(WrappedComponent) {
@@ -20,12 +20,12 @@ export default function withErrorBoundry(WrappedComponent) {
 
         render() {
             return (
-                <div>
-                    {(this.state.hasError) ?
+                <Fragment>
+                     {(this.state.hasError) ?
                         <h1>Something Went Wrong !!</h1>
                         :
-                        <WrappedComponent/>}
-                </div>
+                        <WrappedComponent {...this.props}/>}
+                </Fragment>
             );
         }
     }

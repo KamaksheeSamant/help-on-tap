@@ -32,7 +32,7 @@ const AppHeader = ({ classes, open, handleDrawerOpen }) => (
                 <MenuIcon />
             </IconButton>
             <Typography variant="h6" color="inherit" noWrap>
-                Health Care Tool
+                Peninsula Diagnostic Imaging
             </Typography>
         </Toolbar>
     </AppBar>

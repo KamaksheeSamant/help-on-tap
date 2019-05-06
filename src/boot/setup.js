@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import configureStore from "./configureStore";
 import App from './App';
 
-export default class SetUp extends Component {
+export default class HelpOnTap extends Component {
 
   constructor() {
     super();

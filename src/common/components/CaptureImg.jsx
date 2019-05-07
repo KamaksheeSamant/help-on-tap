@@ -50,17 +50,9 @@ class CaptureImg extends Component {
       console.error('Error: ', error);
     };
   }
-  setImage = (filesdata) => {
+  
+  setImageData = (filesdata) => {
     this.props.handleChange(this.props.fileDateState,filesdata);
-    // var myCanvas = document.getElementById('canvas');
-    // var ctx = myCanvas.getContext('2d');
-    // var img = new Image();
-    // img.src = filesdata;
-    // img.onload = function () {
-    //   ctx.width = img.width;
-    //   ctx.height = img.height;
-    //   ctx.drawImage(img, 0, 0, ctx.width, ctx.height); // Or at whatever offset you like
-    // };
   }
 
   onSelect = event => {
@@ -68,7 +60,7 @@ class CaptureImg extends Component {
     const files = selectedFileName.files;
     selectedFileName = files[0].name;
     this.props.handleChange(this.props.fileNameState,selectedFileName);
-    this.getBase64(files[0],this.setImage);
+    this.getBase64(files[0],this.setImageData);
   }
 
   render() {

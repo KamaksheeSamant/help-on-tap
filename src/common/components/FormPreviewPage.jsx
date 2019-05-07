@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import ImagePainter from './ImagePainter';
 
 const styles = {
     root: {
@@ -10,10 +11,11 @@ const styles = {
     },
 };
 const dataFormater = (data) => {
-
     return Object.keys(data).map((formDataKey) => {
         if (formDataKey.includes("FileData"))
-            return null;
+            return <ImagePainter 
+            ImageDataURI={data[formDataKey]} 
+            ImageId={formDataKey}/>;
         else
             return (
                 <Typography variant="subtitle1" gutterBottom>
@@ -27,8 +29,8 @@ function FormPreviewPage(props) {
     return (
         <div className={classes.root}>
 
-             <Typography variant="h5" gutterBottom>
-                    Form Preview
+            <Typography variant="h5" gutterBottom>
+                Form Preview
             </Typography>
             {dataFormater(formData)}
 
